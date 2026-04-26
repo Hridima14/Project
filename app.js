@@ -32,10 +32,6 @@ const userRouter= require("./routes/user.js");
 const wrapAsync = require("./utils/wrapAsync.js");
 //---------------------------------------------
 
-app.get("/", (req, res) => {
-  res.redirect("/listings");
-});
-
 
 //FOR MONGODB
 const dbUrl= process.env.ATLASDB_URL;
@@ -112,6 +108,13 @@ app.use((req,res,next)=>{
   
   next();
 }); 
+
+
+
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 
 //----------------------------------------
 //ROUTER
