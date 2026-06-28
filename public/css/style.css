@@ -116,3 +116,14 @@ body{
   background-color: lightgray;  
 }
 
+.fav-icon{
+    position: absolute;
+    bottom :15px;
+    right: 15px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.listing-card{
+    position: relative;
+}

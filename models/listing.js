@@ -43,7 +43,30 @@ const listingSchema= new Schema(
             coordinates: {
             type: [Number],
              }
-        }
+        },
+
+        category:{
+            type:String,
+            emun:[
+                "Iconic cities",
+                "Mountains",
+                "Castles",
+                "Beach",
+                "Camping",
+                "Farms",
+                "Arctic",
+                "Desert",
+                "Forest"
+            ],
+
+            default:"Rooms"
+
+        },
+
+        favorite:[{
+            type: Schema.Types.ObjectId,
+            ref:"Listing"
+        }]
 
 
 

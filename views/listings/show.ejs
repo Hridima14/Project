@@ -45,11 +45,12 @@
      <div class="card-body">
      <p class="card-text">
        
-        <p><b>Owner</b> : <i><%=listing.owner.username%></i></p>
+        <p><b>Owner</b> : <i><%=listing.owner?listing.owner.username : "User Deleted"%></i></p>
         <p><b>Description</b> : <%= listing.description%></p>
         <p><b>Price</b> : &#8377;<%= listing.price.toLocaleString("en-IN")%> </p>
         <p><b>Location</b> : <%= listing.location%></p>
         <p><b>Country</b> : <%= listing.country%></p>
+        <p><b>Category</b> : <%=listing.category%></p>
 
     </p>
      </div>   
@@ -139,7 +140,7 @@
                       ms-3
                       mb-3">
              <div class="card-body">
-             <h6 class="card-title"><i>@<%=review.author.username%></i></h6>
+             <h6 class="card-title"><i>@<%=review.author?review.author.username : "User Deleted"%></i></h6>
              <p class="starability-result card-text" data-rating="<%=review.rating%>"></p>
              <p class="card-text">Comment : <%=review.comment%></p>
              
